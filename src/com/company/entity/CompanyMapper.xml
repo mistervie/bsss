@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.entity.CompanyMapper">
+
+<resultMap type="com.company.entity.Company" id="CompanyResult">
+	<id column="cid" jdbcType="VARCHAR" property="cid"/>
+	<result column="csn" jdbcType="VARCHAR" property="csn"/>
+	<result column="cname" jdbcType="VARCHAR" property="cname"/>
+	<result column="cindustry" jdbcType="INTEGER" property="cindustry"/>
+	<result column="cbtime" jdbcType="DATE" property="cbtime"/>
+	<result column="clrname" jdbcType="VARCHAR" property="clrname"/>
+	<result column="clrino" jdbcType="VARCHAR" property="clrino"/>
+	<result column="blno" jdbcType="VARCHAR" property="blno"/>
+</resultMap>
+
+  <select id="getCompanyCsnCname" parameterType="string" resultMap="CompanyResult">
+    select cid,csn,cname,cindustry,cbtime,clrname,clrino,blno from companyinfo where 1=1
+    <if test="_parameter != null and !&quot;&quot;.equals(_parameter)">and cid=#{_parameter,jdbcType=VARCHAR}</if>
+  </select>
+  
+  
+</mapper>

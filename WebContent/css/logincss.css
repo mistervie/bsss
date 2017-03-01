@@ -1,0 +1,169 @@
+@charset "utf-8";
+body{
+			margin:0px;
+			padding:0px;
+			background-color:#0071C5;
+			font-family: "Microsoft YaHei",微软雅黑,"Microsoft JhengHei",华文细黑,STHeiti,MingLiu;
+		}
+		div,ul,li{margin: 0px;padding: 0px;list-style-type: none}
+		.main_login{
+			width:982px;
+			min-height:550px;
+			position:absolute;
+			left:50%;
+			top:50%;
+			margin-top: -275px;
+			margin-left:-491px;
+			z-index: 1;
+			background-image: url();
+			background-repeat: no-repeat;
+			background-position: center center;
+			padding-left: 20px;
+		}
+		.login_info_div{
+			width: 613px;
+			float: left;
+			margin: 0px 0px;
+		}
+		.logo_div{
+
+			margin-top: 60px;
+		}
+		.login_introduction{
+
+			margin-top: 50px;
+			margin-left: 50px;
+			width: 500px;
+
+			font-weight: bold;
+			color: #f8f8f8;
+			font-size: 14px;
+			line-height: 28px;
+			text-shadow: 1px 1px 0 #444,1px 1px 0 #444;
+		}
+		.login_view{
+
+			float:right;
+			background:url(../image/dl.png) no-repeat left top;
+			width:236px;
+			height: 240px;
+			padding-top:65px;
+			padding-right: 30px;
+			padding-left: 30px;
+			margin-right: 60px;
+			margin-top: 60px;
+		}
+		.login_view table{
+			color:#808080;
+			font-size:14px;
+		}
+		#input_usercno{
+			border:1px solid #c7c7c7;
+			height:30px;
+			line-height: 30px;
+			font-size: 14px;
+			color:#c1c1c1;
+			padding-right:10px;
+			padding-left: 50px;
+			background-color:#FFF;
+			background-image: url(../image/usercno.gif); 
+			background-repeat:no-repeat;
+			background-position: left center;
+			font-size: 14px;
+			-webkit-border-radius:2px;
+			-moz-border-radius:2px;
+			border-radius: 2px; 
+		}
+		#input_password{
+			border:1px solid #c7c7c7;
+			height:30px;
+			line-height: 30px;
+			font-size: 14px;
+			color:#c1c1c1;
+			padding-right:10px;
+			padding-left: 50px;
+			background-color:#FFF;
+			background-image: url(../image/password.gif); 
+			background-repeat:no-repeat;
+			background-position: left center;
+			font-size: 14px;
+			-webkit-border-radius:2px;
+			-moz-border-radius:2px;
+			border-radius: 2px; 
+		}
+		#input_captcha{
+			border:1px solid #c7c7c7;
+			height:30px;
+			line-height: 30px;
+			font-size: 14px;
+			color:#c1c1c1;
+			padding-right:10px;
+			padding-left: 50px;
+			background-color:#FFF;
+			background-image: url(../image/captcha.gif); 
+			background-repeat:no-repeat;
+			background-position: left center;
+			font-size: 14px;
+			-webkit-border-radius:2px;
+			-moz-border-radius:2px;
+			border-radius: 2px; 
+		}
+		.forget_password{
+			color:#0071C5;
+			font-size: 12px;
+		}
+		.forget_password a{
+			color:#0071C5;
+			text-decoration: none;
+		}
+		.forget_password a:hover{
+			color:#F00;
+			text-decoration: none;
+		}
+		.login_button{
+			background: #6DC944;
+			height:40px;
+			border-radius: 2px;
+			width: 234px;
+			text-align:center;
+			color: #fff;
+			font-size: 18px;
+			border:none;
+		}
+		
+		.head{
+			width:100%;
+			min-width: 1002px;
+			background:url() #fff repeat-x;
+			height: 79px;
+			position:absolute;
+			top: 0px;
+			left:0px;
+		}
+		.foot{
+			width: 100%;
+			min-width: 1002px;
+			height: 80px;
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			background-color: #cfcfcf;
+		}
+		.foot li{
+			width: 982px;
+			text-align: center;
+			line-height: 40px;
+			font-size: 13px;
+			color: #333;
+			clear: both;
+			margin-right: auto;
+			margin-left: auto;
+			padding-left: 20px;
+		}
+		.gray{
+
+
+			color: #848484;
+			text-align: center;
+			line-height: 80px;
+		}

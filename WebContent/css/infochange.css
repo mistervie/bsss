@@ -1,0 +1,78 @@
+body{
+			margin: 0px;
+			padding: 0px;
+			background-repeat: repeat;
+			font-family: STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑";
+			font-size: 12px;
+			text-align: center;
+			color: #003366;
+		}
+
+		.table {
+			width: 100%;
+			margin: 0 auto;
+			text-align: center;
+			table-layout:fixed;
+			margin-bottom: 0px;
+			border-top: 1px solid #C9E5FD;
+			border-left: 1px solid #C9E5FD;
+		}
+		.table tr{
+			width: 100%;
+			height: 20px;
+			line-height: 20px;
+			background-color: white;
+		}
+		.table th,td{
+			height: 30px;
+			line-height: 30px;
+			background-color: white;
+			overflow:hidden; 
+			white-space:nowrap;
+			border-right: 1px solid #C9E5FD;
+			border-bottom: 1px solid #C9E5FD;
+		}
+		.table th{
+			background-color: #EAF6FF;
+		}
+		.tab_pageControl{
+			width: 100%;
+			height: 30px;
+		}
+		.tab_pageControlText{
+			float: left;
+			padding-left: 10px;
+			text-align: left; 
+			line-height: 30px;
+			width: 200px;
+			height: 30px;
+		}
+		.tab_pageControl ul{
+			margin-top: 5px;
+			margin-bottom: 5px;
+			float: right;
+			margin-right: 10px;
+		}
+		.tab_pageControl li{
+			border: 1px solid #EAF6FF;
+			width: 50px;
+			height: 20px;
+			margin: 0 auto;
+			text-align: center;
+			line-height: 20px;	
+			float: left;
+			list-style: none;
+			cursor: pointer;
+		}
+		.tab_pageControl li:hover{
+			background-color: #E8E8E8;
+		}
+		.bbstate{
+			width: 30%;
+		}
+		.baresult{
+			width: 30%;
+		}
+		#table3 p{
+			white-space:normal;
+		}

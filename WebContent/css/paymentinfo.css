@@ -1,0 +1,36 @@
+body{
+			margin: 0px;
+			padding: 0px;
+			font-family: STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑";
+			font-size: 12px;
+			text-align: center;
+			color: #003366;
+		}
+
+		.tip{
+			width: 80%;
+			height: 30px;
+			font-size: 20px;
+			text-align: center;
+			line-height: 30px;
+			margin: 0 auto;
+		}
+
+		.table {
+			width: 80%;
+			margin: 0 auto;
+			text-align: center;
+			border-top: 1px solid #C9E5FD;
+			border-left: 1px solid #C9E5FD;
+			margin-bottom: 40px;
+		}
+		.table th,td{
+			height: 30px;
+			line-height: 30px;
+			background-color: white;
+			border-right: 1px solid #C9E5FD;
+			border-bottom: 1px solid #C9E5FD;
+		}
+		.table th{
+			background-color: #EAF6FF;
+		}

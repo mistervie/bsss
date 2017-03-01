@@ -1,0 +1,94 @@
+@charset "utf-8";
+body{
+			margin: 10px;
+			padding: 0px;
+			background-repeat: repeat;
+			font-family: STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑";
+			font-size: 12px;
+			text-align: center;
+			color: #003366;
+		}
+		table{
+			margin: 0 auto;
+			border: 1px solid #C9E5FD;
+			background-color: #EAF6FF;
+			width: 95%;
+			text-align: right;
+			border-radius: 2px;
+		}
+		
+		td{
+			border: 1px solid #C9E5FD;
+			border-right: none;
+			border-bottom: none;
+			height: 30px;
+		}
+		input{
+			border: none;
+			width: calc(100% - 20px);
+			height: 100%;
+			padding-left: 10px;
+			padding-right: 10px;
+
+		}
+		
+		#tip{
+			width: 95%;
+			height: 30px;
+			text-align: left;
+			line-height: 30px;
+			margin: 0 auto;
+			font-size: 13px;
+			margin-bottom: 5px;
+		}
+		.userID{
+			background-color: transparent;
+			margin-left: 5px;
+			width: 200px;
+			height: 25px;
+			padding-left: 10px;
+			text-align: left;
+			border: none;
+			border-bottom: 2px solid #C9E5FD;
+		}
+		.selectButton{
+			margin-left: 5px;
+			width: 50px;
+			height: 25px;
+			background-color: #6DC944;
+			color: white;
+			border-radius: 2px;
+		}
+
+		#tip_1{
+			width: 95%;
+			height: 25px;
+			text-align: left;
+			line-height: 25px;
+			margin: 50px auto;
+			font-size: 13px;
+		}
+		
+		select{
+			border: none;
+			background-color: white;
+			width: 100%;
+			height: 100%;
+		}
+		#submit{
+			width: 100px;
+			height: 25px;
+			margin-right: 30px;
+			background-color: #6DC944;
+			color: white;
+			border-radius: 2px;
+		}
+		#reset{
+			width: 100px;
+			height: 25px;
+			float: left;
+			margin-left: 30px;
+			background-color: #6DC944;
+			color: white;
+			border-radius: 2px;
+		}

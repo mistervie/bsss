@@ -1,0 +1,165 @@
+@charset "utf-8";
+body{
+			margin: 0px;
+			padding: 0px;
+			background-image: url(../image/admin/furley_bg.png);
+			background-repeat: repeat;
+			font-family: "Microsoft YaHei",微软雅黑,"Microsoft JhengHei",华文细黑,STHeiti,MingLiu;
+		}
+		
+		li{
+			cursor: pointer;
+			font-size: 14px;
+		}
+		
+		#header{
+			position: relative;
+			/* background-color: #1295d8; */
+			background-color: #0071C5;
+			text-align: center;
+			margin: 0px auto;
+			width: 1280px;
+			height: 80px;
+			overflow: hidden;
+		}
+		
+		#head_top_label{
+			position: absolute;
+			width: 300px;
+			height: 60px;
+			font-size: 30px;
+			font-weight: bold;
+			text-align: center;
+			line-height: 60px;
+			color: white;
+			top: 10px;
+			left: 10px;
+		}
+		
+		#header_login_user{
+			position: absolute;
+			right: 100px;
+			bottom: 5px;
+			width: 200px;
+			height: 30px;
+			font-size: 12px;
+			text-align: center;
+			line-height: 30px;
+			color: white;
+		}
+		#center{
+			overflow: hidden;
+			width: 1280px;
+			margin: 0px auto;
+			text-align: center;
+		}
+		#center_left{
+			margin-left: 10px;
+			border: none;
+			overflow: hidden;
+			width: 200px;
+			float: left;
+		}
+		
+		.actionItem{
+			background-image: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgb(206, 206, 206)), to(rgb(255, 255, 255)));
+			font-size: 14px;
+			font-weight: bold;
+			border: 1px solid #ccc;
+  			border-bottom: 1px solid #aaa;
+			height: 30px;
+			width: 198px;
+			margin-top: 10px;
+ 			text-align: center;
+ 			line-height: 30px;
+  			color: #333333;
+  			text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  			text-transform: uppercase;
+  			border-top-left-radius: 2px;
+  			border-top-right-radius: 2px;
+  			cursor: pointer;
+		}
+		.actionItem img{
+			float: right;
+			margin: 5px auto;
+
+		}
+		.actionItemUl{
+			border: 1px solid #ccc;
+  			border-bottom: 1px solid #aaa;
+			border-top: none;
+			border-bottom-left-radius: 2px;
+  			border-bottom-right-radius: 2px;
+			width: 198px;
+			list-style-type:none;
+			margin-top: 0px;
+			padding: 0px;
+		}
+		.actionItemUl li{	
+			background-color: white;
+			color: #0071C5;
+			margin: 0 auto;
+			text-align: center;
+			line-height: 30px;
+        	height:30px;
+        	width: 198px;
+        	font-size: 13px;
+        	font-weight: bold;
+
+		}
+		.actionItemUl li:hover{
+			background-color: #E8E8E8;
+			color: #2266aa;
+		}
+		
+		
+
+		#center_right{
+			width: 1050px;
+			height: 600px;
+			margin-left: 10px;
+			float: left;
+		}
+		#right_nav{
+			font-size: 14px;
+			font-weight: bold;
+			border: 1px solid #ccc;
+			margin-top: 10px;
+			height: 30px;
+			background-image: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgb(206, 206, 206)), to(rgb(255, 255, 255)));
+			text-align: left;
+			line-height: 30px;
+			padding-left: 10px;
+
+			color: #333333;
+  			text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  			border-top-left-radius: 2px;
+  			border-top-right-radius: 2px;
+		}
+		#right_manipulate{
+			border: 1px solid #ccc;
+			width: calc(100% -2px);
+			height: 570px;
+			border-top: none;
+			border-bottom-left-radius: 2px;
+  			border-bottom-right-radius: 2px;
+		}
+		#right_manipulate_html{
+			width: calc(100% - 2px);
+			height: calc(100% - 2px);
+		}
+		#footer{
+			width: 1280px;
+			height: 70px;
+			margin: 0px auto;
+			text-align: center;
+			margin-top: 0px;
+		}
+		hr{
+			width: 1270px;
+			margin: 10px auto;
+			text-align: center;
+  			border: 0;
+  			border-top: 1px solid #A7A7A7;
+  			border-bottom: 1px solid #ffffff;
+		}

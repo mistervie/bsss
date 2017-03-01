@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.staff.entity.StaffMapper">
+
+<resultMap type="com.staff.entity.Staff" id="StaffResult">
+	<id column="sid" jdbcType="VARCHAR" property="sid"/>
+	<result column="sino" jdbcType="VARCHAR" property="sino"/>
+	<result column="sname" jdbcType="VARCHAR" property="sname"/>
+	<result column="ssex" jdbcType="INTEGER" property="ssex"/>
+	<result column="snation" jdbcType="INTEGER" property="snation"/>
+	<result column="sbirth" jdbcType="DATE" property="sbirth"/>
+	<result column="sdaj" jdbcType="DATE" property="sdaj"/>
+	<result column="spi" jdbcType="INTEGER" property="spi"/>
+	<result column="seb" jdbcType="INTEGER" property="seb"/>
+	<result column="sstate" jdbcType="INTEGER" property="sstate"/>
+	<result column="spbase" jdbcType="INTEGER" property="spbase"/>
+	<association property="company" javaType="com.company.entity.Company">
+		<id column="cid" jdbcType="VARCHAR" property="cid"/>
+		<result column="csn" jdbcType="VARCHAR" property="csn"/>
+		<result  column="cname" jdbcType="VARCHAR" property="cname"/>
+	</association>
+</resultMap>
+
+  <select id="getStaffBasicInfo" parameterType="string" resultMap="StaffResult">
+    select s.sid,s.sino,s.sname,s.ssex,s.snation,s.sbirth,s.sdaj,s.spi,s.seb,s.sstate,s.spbase,s.cid,c.csn,c.cname from staffinfo s, companyinfo c where s.cid = c.cid
+    <if test="_parameter != null and !&quot;&quot;.equals(_parameter)">and s.sid=#{_parameter,jdbcType=VARCHAR}</if>
+  </select>
+  
+  <select id="getStaffsByName" parameterType="Map" resultMap="StaffResult">
+    select s.sid,s.sino,s.sname,s.ssex,s.snation,s.sbirth,s.sdaj,s.sstate,s.spbase,s.cid,c.csn,c.cname from staffinfo s, companyinfo c where s.cid = c.cid
+    <if test="sname != null and !&quot;&quot;.equals(sname)">and s.sname like CONCAT('%',#{sname,jdbcType=VARCHAR},'%')</if>
+    <if test="start!=null and limit!=null">  
+        limit #{start},#{limit}  
+    </if> 
+  </select>
+  
+  <select id="getStaffsCountByName" parameterType="string" resultType="java.lang.Integer">
+    select count(*) from staffinfo where 1=1
+    <if test="_parameter != null and !&quot;&quot;.equals(_parameter)">and sname like CONCAT('%',#{_parameter,jdbcType=VARCHAR},'%')</if>
+  </select>
+  
+  <update id="updateStaffBasicInfo" parameterType="com.staff.entity.Staff">
+  	update staffinfo
+  	<set>
+  		<if test="sname !=null and !&quot;&quot;.equals(sname)">sname=#{sname},</if>
+  		<if test="sino !=null and !&quot;&quot;.equals(sino)">sino=#{sino},</if>
+  		<if test="ssex !=null">ssex=#{ssex},</if>
+  		<if test="snation !=null">snation=#{snation},</if>
+  		<if test="sbirth !=null">sbirth=#{sbirth},</if>
+  		<if test="sdaj !=null">sdaj=#{sdaj},</if>
+  		<if test="spi !=null">spi=#{spi},</if>
+  		<if test="seb !=null">seb=#{seb},</if>
+  		<if test="sstate !=null">sstate=#{sstate},</if>
+  		<if test="company.cid !=null">cid=#{company.cid},</if>
+  	</set>
+  	where sid=#{sid}
+  </update>
+  
+  
+  <resultMap type="com.staff.entity.Staffpayment" id="StaffpaymentResult">
+  	<id column="id" jdbcType="INTEGER" property="id"/>
+	<result column="sid" jdbcType="VARCHAR" property="sid"/>
+	<result column="pym" jdbcType="VARCHAR" property="pym"/>
+	<result column="pbase" jdbcType="INTEGER" property="pbase"/>
+	<result column="pstate" jdbcType="INTEGER" property="pstate"/>
+	<result column="pbtime" jdbcType="DATE" property="pbtime"/>
+	<result column="pstime" jdbcType="DATE" property="pstime"/>
+	<association property="staff" javaType="com.staff.entity.Staff">
+		<id column="sid" jdbcType="VARCHAR" property="sid"/>
+	</association>
+</resultMap>
+  
+  <select id="getStaffpaymentResultBySid" parameterType="string" resultMap="StaffpaymentResult">
+  	select id,sid,pym,pbase,pstate,pbtime,pstime from staffpayment where 1=1 
+  	<if test="_parameter != null and !&quot;&quot;.equals(_parameter)">and sid = ${_parameter}</if>
+  </select>
+  	
+</mapper>

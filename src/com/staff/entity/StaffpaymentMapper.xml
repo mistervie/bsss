@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.staff.entity.StaffpaymentMapper">
+
+  <resultMap type="com.staff.entity.Staffpayment" id="StaffpaymentResult">
+  	<id column="id" jdbcType="INTEGER" property="id"/>
+	<result column="sid" jdbcType="VARCHAR" property="sid"/>
+	<result column="pym" jdbcType="VARCHAR" property="pym"/>
+	<result column="pbase" jdbcType="INTEGER" property="pbase"/>
+	<result column="pstate" jdbcType="INTEGER" property="pstate"/>
+	<result column="pbtime" jdbcType="DATE" property="pbtime"/>
+	<result column="pstime" jdbcType="DATE" property="pstime"/>
+	<association property="staff" javaType="com.staff.entity.Staff">
+		<id column="sid" jdbcType="VARCHAR" property="sid"/>
+	</association>
+</resultMap>
+  
+  <select id="getStaffpaymentResultBySid" parameterType="string" resultMap="StaffpaymentResult">
+  	select id,sid,pym,pbase,pstate,pbtime,pstime from staffpayment where 1=1 
+  	<if test="_parameter != null and !&quot;&quot;.equals(_parameter)">and sid = ${_parameter}</if>
+  </select>
+  	
+</mapper>
